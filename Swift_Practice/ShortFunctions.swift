@@ -20,5 +20,4 @@ for harf in Metin{
     sozluk[harf] = count + 1
 }
     return String(encokgecenHarf)
-
 }

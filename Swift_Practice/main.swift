@@ -1803,3 +1803,6 @@ filtreliListe = tamliste.filter({(str: String) -> Bool in
             return str.range(of: "a", options: .caseInsensitive) != nil
         })
 print(filtreliListe)
+
+
+print(TersYaziEsitMi(yazi: "ali"))

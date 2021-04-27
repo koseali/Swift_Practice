@@ -10,6 +10,7 @@
 		9507B38626136313007DF0C3 /* newFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507B38526136313007DF0C3 /* newFile.swift */; };
 		9507B38926136A18007DF0C3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507B38826136A18007DF0C3 /* File.swift */; };
 		950C0214260BA06A008FABE1 /* File_pr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C0213260BA06A008FABE1 /* File_pr.swift */; };
+		95173CFD26389E3E007D4281 /* TersYaziEsitMi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95173CFC26389E3E007D4281 /* TersYaziEsitMi.swift */; };
 		954951CC260A700A00AED3EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954951CB260A700A00AED3EE /* main.swift */; };
 		958E48AA262AD958007D7A17 /* DecimalToBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E48A9262AD958007D7A17 /* DecimalToBinary.swift */; };
 		958E48AE262ADCA3007D7A17 /* ShortFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E48AD262ADCA3007D7A17 /* ShortFunctions.swift */; };
@@ -31,6 +32,7 @@
 		9507B38526136313007DF0C3 /* newFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFile.swift; sourceTree = "<group>"; };
 		9507B38826136A18007DF0C3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = ../File.swift; sourceTree = "<group>"; };
 		950C0213260BA06A008FABE1 /* File_pr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File_pr.swift; sourceTree = "<group>"; };
+		95173CFC26389E3E007D4281 /* TersYaziEsitMi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TersYaziEsitMi.swift; sourceTree = "<group>"; };
 		954951C8260A700A00AED3EE /* Swift_Practice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift_Practice; sourceTree = BUILT_PRODUCTS_DIR; };
 		954951CB260A700A00AED3EE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		958E48A9262AD958007D7A17 /* DecimalToBinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalToBinary.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				958E48A9262AD958007D7A17 /* DecimalToBinary.swift */,
 				9507B38526136313007DF0C3 /* newFile.swift */,
 				958E48AD262ADCA3007D7A17 /* ShortFunctions.swift */,
+				95173CFC26389E3E007D4281 /* TersYaziEsitMi.swift */,
 			);
 			path = Swift_Practice;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958E48AA262AD958007D7A17 /* DecimalToBinary.swift in Sources */,
+				95173CFD26389E3E007D4281 /* TersYaziEsitMi.swift in Sources */,
 				954951CC260A700A00AED3EE /* main.swift in Sources */,
 				958E48AE262ADCA3007D7A17 /* ShortFunctions.swift in Sources */,
 				9507B38926136A18007DF0C3 /* File.swift in Sources */,
