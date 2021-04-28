@@ -45,7 +45,7 @@ func DecimalToBinary(N : Int) -> String{
     var boslukListesi = [Int]()
 
     for i in binary{
-        if i == "1" { flag = true // bir daha buraya donmesi icin 1 olması lazım ondan flag resetlemeye gerek yok.
+        if i == "1" { flag = true
             if flag == true && boslukSayisi != 0 {
                 boslukListesi.append(boslukSayisi)
                 boslukSayisi = 0}

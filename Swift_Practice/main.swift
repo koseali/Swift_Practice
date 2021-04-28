@@ -109,7 +109,7 @@ import Foundation
 // ---------------Lab: Listedeki elemanlar indexi ile ekrana basılacak---------------////
 
 
-/// Dıctionary practice
+// Dıctionary practice
 //
 //var sozlukSayi = [1: "Karpuz" , 2:"Elma" , 3: "Kavun"]
 //var d1 = [Int:String]()
@@ -1329,209 +1329,30 @@ enum HataKodları : Int, Error{
 //var nesne = SinifP<SP>()
 //print(nesne.generictip)
 //// Generic biraz daha bakılmalı
-print("Ali")
 //
+
+
+var sayi = 6
+var sonuc = FindPow(sayi: sayi)
+print("Girilen \(sayi) sinin tabanı \(sonuc.Taban) olan ussu \(sonuc.Us) dur." )
 //----------------Ornek Girilen bir sayının hangi sayının kaçıncı üstü olduğunu bulan recursive fonk yazınız. ----------------
 
 
-func usHesapla() {
-   // print("Lutfen bir sayi giriniz.", terminator: ".")
-    let girilenSayi = 100
-        //Int(readLine()!)!
-    var carpanListe = [Int]()
 
-    for carpan in 2...girilenSayi{
-        if girilenSayi %  carpan == 0{
-            carpanListe.append(carpan)
-        }
-    }
-    var tabanSayisi = 0
-    var uSayisi = 0
-    var sayi = girilenSayi
-    if let minCarpan = carpanListe.min() {
-        var usSayisi = 0
-        while sayi != 1 {
-             sayi = sayi / minCarpan
-            usSayisi += 1
-        }
-            
-        }
-    // 100 sayiis tam degil tam dogru çalişmiyor yukarıdaki. bu düzeltme için yazılabilir.
-//    for carpan in carpanListe{
-//        while sayi != 1{
-//            sayi = sayi / carpan
-//            usSayisi += 1
-//        }if Int(pow(Decimal(carpan)), usSayisi) == girilenSayi{
-//            tabanSayisi = carpan
-//            break
-//        }else{usSayisi = 0}
-//
-//        print("Girilen \(girilenSayi) sayisi \(minCarpan) ın \(usSayisi). kuvvetidir.")
-//     }
-    //return usHesapla()
-}
-
-usHesapla()
-
-//----------------Ornek Girilen bir sayının hangi sayının kaçıncı üstü olduğunu bulan recursive fonk yazınız. ----------------
-
-// girilen 10 luk sistem sayıyı ikilik sisteme çevirme
-
-//var sayi = 8
-//var binaryList = [Int]()
-//while sayi != 1{
-//    if sayi % 2 == 0{
-//        sayi /= 2
-//        if sayi != 1{
-//            binaryList.append(0)
-//        }else if sayi == 1 {
-//            binaryList.append(1)
-//        }
-//        print(sayi)
-//    }
-//    else {
-//        sayi = sayi / 2
-//        print(sayi)
-//        binaryList.append(1)
-//    }
-//    if sayi == 1 && binaryList.last != 1 {
-//        binaryList.append(1)
-//    }
-//}
-//var size = binaryList.count - 1
-//var yazi = ""
-//for eleman in binaryList {
-//    yazi += String(eleman)
-//}
-//print("ali")
-//print(binaryList)
-
-// -----------------------------ONLUK SAYIYI 2 LİK SİSTEME ÇEVİRİP 1 LER ARASINDA  EN ÇOK 0SAYISI HESAPLAMA-------------//
-//func DecimalToBinary(N : Int) -> String{
-//    var sayi = N
-//    var kalanList = [Int]()
-//    while sayi != 1{
-//        if sayi % 2 == 0{
-//            sayi = sayi / 2
-//            kalanList.append(0)
-//            if sayi == 1 {
-//                kalanList.append(1)
-//                break
-//            }
-//        }
-//        else {
-//            sayi = sayi / 2
-//            kalanList.append(1)
-//            if sayi == 1 {
-//                kalanList.append(1)
-//                break
-//            }
-//        }
-//        // sayiyi bulduk binary listede
-//    }
-//    // listedeki degerleri tersten stringe koyma
-//    var binary : String = ""
-//    var count = kalanList.count - 1
-//    while count != 0{
-//        binary += String(kalanList[count])
-//        count -= 1
-//        if count == 0{
-//            binary += String(kalanList[count])
-//            break
-//        }
-//    }
-//      // 1- -1 arası maks sıfır sayısı bulma
-//    var flag = false
-//    var boslukSayisi = 0
-//    var boslukListesi = [Int]()
-//
-//    for i in binary{
-//        if i == "1" { flag = true // bir daha buraya donmesi icin 1 olması lazım ondan flag resetlemeye gerek yok.
-//            if flag == true && boslukSayisi != 0 {
-//                boslukListesi.append(boslukSayisi)
-//                boslukSayisi = 0}
-//                }
-//        if flag == true && i == "0"{ boslukSayisi += 1}
-//    }
-//    let sonuc = binary + " sayisinin maks bosluk sayisi: " + String(boslukListesi.max() ?? 0)
-//    return sonuc
-//}
-
-// -----------------------------ONLUK SAYIYI 2 LİK SİSTEME ÇEVİRİP 1 LER ARASINDA  EN ÇOK 0 SAYISI HESAPLAMA-------------//
-
-// BİR LİSTE VAR LİSTEDEKİ EN SONDAKİ ELEMANI EN BAŞA GETİREN FONKSİYN
-
-//liste[3] = liste[2]
-//liste[2] = liste[1]
-//liste[1] = liste[0]
-// liste[n] = liste [n - 1]
-//liste[0] = last
+// ShiftList fonksiyonu girilen diziyi kendi içinde shiftler ve başa yazar.
+var list = [1,2,3,4,5,6]
+var shitListe = ShiftList(&list, 2)
 
 
-// girilen diziyi sağa kaydıran fonksiyon.
-func solution (_ A : inout [Int] , _ K : Int) -> [Int]{
-    for _ in 0..<K{
-        var counter = A.count - 1
-        let last = A[counter]
-        while counter != 0 {
-            A[counter] = A[counter - 1]
-            if counter == 1{
-                A[0] = last
-            }
-            counter -= 1
-        }
-    }
-    return A
-}
-var listee = [1,2,3,4]
 
-func fibonacci(uzunluk : Int) -> [Int]{
-    var list = [1,1]
-    let tekrar = uzunluk - 2
-    for i in 0..<tekrar{
-        list.append(list[i] + list[i + 1])
-    }
-    return list
-}
-print(fibonacci(uzunluk: 15))
+var fiboListe = FibonacciBul(uzunluk: 15)
 
-// girilen adet kadar baştan sona asal bulan fonksiyon.
-func asalSayi(adet : Int) -> [Int]{
-    var asalList = [Int]()
-    for sayi in 2...100{
-        var asalFlag = true
-        for bolen in 2..<sayi{
-            if sayi % bolen == 0{
-                asalFlag = false
-            }
-        }
-        if asalFlag == true{
-            if  asalList.count < adet{
-            asalList.append(sayi)
-            print(sayi)}
-            else{break}
-        }}
-    return asalList }
+var girileneKadar = asalGirilen(sinir: 30)
+
 var listasal = asalSayi(adet: 10)
-print(listasal.count)
 
-// girilen sayiya kadar asal sayı bul.
-func asalGirilen(sinir : Int) -> [Int]{
-    var asalList = [Int]()
-    for sayi in 2...sinir {
-        var asalFlag = true
-        for bolen in 2..<sayi{
-            if sayi % bolen == 0{
-                asalFlag = false
-            }
-        }
-        if asalFlag == true{
-            asalList.append(sayi)
-            print(sayi)
-        }
-    }
-    return asalList
-}
+
+
 
 //class C{}
 //class D : C{}
@@ -1776,33 +1597,39 @@ func FindMostDivision(liste1 : [Float] , liste2 : [Float]) -> String {
     }
     return anahtar
 }
-var liste1 :[Float] = [4,4,7,1,2]
-var liste2 :[Float] = [4,4,8,1,2]
 
-//
 
-//print(kesirSozluk)
-//print("maks anahtar = \(anahtar) ve donme sayisi \(index)")
 
-// cumle split atma
-//var  cumle = "Ali Ders Calis"
-//var fullNameArr = cumle.split() {$0 == " "}
-//print(fullNameArr)
 
-//func SplitString(Text : String) -> Substring {
-//    let splitText = Text.split(separator: " ")
-//    return splitText
-//}
-//var Liste = [Substring]()
-//Liste = SplitString(Text: "Selam olsun sana")
-//print(SplitString(Text: "Selam Olsun Sana Ali"))
-//
+var splitlenecekYazi  = "Ali Bugun Fonksiyon yaziyor."
+var splitlenmis = SplitString(Text: splitlenecekYazi)
+
+//  Listede Fİltreleme işlemi Yapılması.
+
 var filtreliListe : [String] = []
 var tamliste  = ["Elma", "Armut", "Portakal", "Limon", "Ayva", "Erik"]
 filtreliListe = tamliste.filter({(str: String) -> Bool in
             return str.range(of: "a", options: .caseInsensitive) != nil
         })
-print(filtreliListe)
 
+// Girilen string değeri tersten de eşit mi bulan fonksiyon
 
-print(TersYaziEsitMi(yazi: "ali"))
+var tersYaziSonuc : Bool = TersYaziEsitMi(yazi: "ali")
+// Tuple ile Fonksiyonda çoklu değer dönme.
+
+// 2 dizi içinde aynı indisteki elemanları bölüm sonucları en çok tekrar edeni bul ve kaç old. yazdır.
+var liste_1 : [Float] = [3,4,3,16]
+var liste_2 : [Float] = [2,4,6,8]
+var sonucDict = [Float : Int]()
+// şimdi nerde tutucam bölümü ve kaç kere geçtiğini tutmalyım
+var boyut = liste_1.count
+for i in 0..<boyut{
+    let key = liste_1[i] / liste_2[i]
+    if sonucDict[key] == nil{
+        sonucDict[key] = 1
+    }
+    if sonucDict[key] != nil {
+        sonucDict[key]! += 1
+    }
+}
+print(sonucDict)
