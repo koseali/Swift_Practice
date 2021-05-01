@@ -420,31 +420,31 @@ import Foundation
 //
 //// Hocam parçalara ayırdı.
 //
-//func enKucukyaz(){
-//    var enKucuk : Float = sayilar[0]
+func enKucukyaz(){
+    var enKucuk : Float = sayilar[0]
+
+    for sayi in sayilar{
+        if sayi < enKucuk{
+            enKucuk = sayi
+        }
+    }
+    print("En kucuk sayi : \(enKucuk)")
+}
 //
-//    for sayi in sayilar{
-//        if sayi < enKucuk{
-//            enKucuk = sayi
-//        }
-//    }
-//    print("En kucuk sayi : \(enKucuk)")
-//}
+func enBuyukyaz(){
+    var enBuyuk : Float = 0
+    for sayi in sayilar{
+        if sayi > enBuyuk{
+            enBuyuk = sayi
+        }
+    }
+    print(("En Buyuk sayi \(enBuyuk)"))
+}
 //
-//func enBuyukyaz(){
-//    var enBuyuk : Float = 0
-//    for sayi in sayilar{
-//        if sayi > enBuyuk{
-//            enBuyuk = sayi
-//        }
-//    }
-//    print(("En Buyuk sayi \(enBuyuk)"))
-//}
-//
-//func OrtalamaYaz(){
-//    let ortalama = sayilar.reduce(0){$0 + $1} / Float(sayilar.count)
-//    print("ortalma : \(ortalama)")
-//}
+func OrtalamaYaz(){
+    let ortalama = sayilar.reduce(0){$0 + $1} / Float(sayilar.count)
+    print("ortalma : \(ortalama)")
+}
 //
 //func DegerleriYaz(){
 //    enKucukyaz()
@@ -464,12 +464,12 @@ import Foundation
 //    return ("",23)
 //}
 //
-//func Karsilastir(s1 : Int , s2 : Int) -> (kucuk: Int , buyuk : Int){
-//    if s1 < s2 {
-//        return(s1,s2)
-//    }
-//    return (s2,s1)
-//}
+func Karsilastir(s1 : Int , s2 : Int) -> (kucuk: Int , buyuk : Int){
+    if s1 < s2 {
+        return(s1,s2)
+    }
+    return (s2,s1)
+}
 //
 //print(Karsilastir(s1: 12, s2: 10))
 //var kucuk = Karsilastir(s1: 12, s2: 14).kucuk
@@ -479,21 +479,21 @@ import Foundation
 // Fonk LAb 2
 // elimizdeki puan listesine göre listedki en düşük puan , en yüksek puan ve toplam puanları kullanıcya gösterelim.
 
-//func PuanHesapla (puanlar : [Int]) -> (dusuk : Int , yuksek : Int , toplam : Int){
-//    var dusuk = puanlar[0]
-//    var yuksek = 0
-//    var toplam = 0
-//    for puan in puanlar{
-//        if puan <= dusuk{
-//            dusuk = puan
-//        }
-//        if puan >= yuksek {
-//            yuksek = puan
-//        }
-//    }
-//    toplam = puanlar.reduce(0){$0 + $1}
-//    return (dusuk,yuksek, toplam)
-//}
+func PuanHesapla (puanlar : [Int]) -> (dusuk : Int , yuksek : Int , toplam : Int){
+    var dusuk = puanlar[0]
+    var yuksek = 0
+    var toplam = 0
+    for puan in puanlar{
+        if puan <= dusuk{
+            dusuk = puan
+        }
+        if puan >= yuksek {
+            yuksek = puan
+        }
+    }
+    toplam = puanlar.reduce(0){$0 + $1}
+    return (dusuk,yuksek, toplam)
+}
 //
 //func PuanHesaplaIki (puanlar : Int...) -> (dusuk : Int , yuksek : Int , toplam : Int){
 //    var dusuk = puanlar[0]
@@ -575,13 +575,13 @@ import Foundation
 
 // FONKSİYONA FONKSİYON PARAMETRESİ VERMEK
 
-//func f1 (p1 : Int){
-//    print(p1)
-//}
-//
-//func f2 ( fonk : (Int) -> ()){
-//    fonk(3)
-//}
+func f1 (p1 : Int){
+    print(p1)
+}
+
+func f2 ( fonk : (Int) -> ()){
+    fonk(3)
+}
 //
 //f2(fonk: f1)
 //// Bu Şekilde kullanım yapılarak tetikleme yapılabilir. fakat bu temiz şekilde closure
