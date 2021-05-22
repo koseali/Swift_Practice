@@ -420,6 +420,7 @@ import Foundation
 //
 //// Hocam parçalara ayırdı.
 //
+var sayilar  = [Float]()
 func enKucukyaz(){
     var enKucuk : Float = sayilar[0]
 
@@ -1633,3 +1634,59 @@ for i in 0..<boyut{
     }
 }
 print(sonucDict)
+
+func girilensayiyaKadarFibAsalBul(sayi : Int) -> [Int]{
+    var fibosayilar  : [Int] = [1,1]
+    var asalSayilar = [1,2]
+    let sinir = sayi
+     var counter = 0
+    while fibosayilar.max()! < sinir{
+        let temp = fibosayilar[counter] + fibosayilar[counter + 1]
+        if temp <= sinir{
+            fibosayilar.append(temp)
+            counter += 1
+        }
+        else{
+
+            for sayi in fibosayilar{
+                var asalSayi : Bool = true
+                if sayi == 1 || sayi == 2 {
+                    continue
+                }
+                for bolen in 2..<sayi{
+                    if sayi % bolen == 0{
+                        asalSayi = false
+                    }
+                }
+                if asalSayi == true {
+                    asalSayilar.append(sayi)
+                }
+            }
+            return asalSayilar
+        }
+    }
+    return asalSayilar
+}
+print("Girilen Sayıya kadarFibasalbul çıktısı")
+print(girilensayiyaKadarFibAsalBul(sayi: 4_500_000))
+
+func asalBul(girilenSayiDizisi : [Int]) -> [Int]{
+    var asalSayilar : [Int] = [1,2]
+    for sayi in girilenSayiDizisi{
+        var asalSayi : Bool = true
+        if sayi == 1 || sayi == 2 {
+            continue
+        }
+        for bolen in 2..<sayi{
+            if sayi % bolen == 0{
+                asalSayi = false
+            }
+        }
+        if asalSayi == true {
+            asalSayilar.append(sayi)
+        }
+    }
+    return asalSayilar
+}
+
+
